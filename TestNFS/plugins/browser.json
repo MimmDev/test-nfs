@@ -1,0 +1,15 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "phonegap-nfc": {
+            "PACKAGE_NAME": "com.mimmdev.testnfs"
+        }
+    },
+    "dependent_plugins": {}
+}
