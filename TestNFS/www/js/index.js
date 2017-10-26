@@ -14,10 +14,12 @@ var app = {
           parseTag,
 
           function() {
-            console.log("Success.");
+            var d = document.getElementById("thing")
+            d.innerHTML = "<p>Success! Wonderful.</p>"
           },
           function() {
-            console.log("Fail.");
+            var d = document.getElementById("thing")
+            d.innerHTML = "<p>Failure :( this is so sad </p>"
           }
         );
     },
@@ -27,6 +29,7 @@ var app = {
 
 }
 
-function parseTag(lol) {
-    alert(lol)
+function parseTag() {
+    var d = document.getElementById("thing")
+    d.innerHTML = "<p>WE ARE PARSING THE TAG</p>"
 }
