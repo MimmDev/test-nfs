@@ -8,10 +8,7 @@ var app = {
     },
 
     onDeviceReady: function () {
-        app.alert("Woooooooooohhh");
-        navigator.notification.alert("Device ready");
-        output = getElementById("thing");
-        output.innerHTML("Some dynamic output");
+        Log.i("myTag", "This is my message");
 
         function failure(reason) {
             navigator.notification.alert(reason, function() {}, "There was a problem");
