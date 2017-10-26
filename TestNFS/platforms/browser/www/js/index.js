@@ -9,7 +9,7 @@ var app = {
 
     deviceReady: function () {
         navigator.notification.alert("Device ready");
-        ouput = getElementById("thing")
+        output = getElementById("thing")
         output.innerHTML("Some dynamic output")
 
         function failure(reason) {
