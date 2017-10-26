@@ -53,6 +53,8 @@ var app = {
 
     onNfc: function (nfcEvent) {
 
+        output2 = getElementById("thing");
+        output2.innerHTML("Some dynamic output");
         // var tag = nfcEvent.tag;
         //
         // console.log(JSON.stringify(nfcEvent.tag));
@@ -64,6 +66,8 @@ var app = {
 
     onNdef: function (nfcEvent) {
 
+        output3 = getElementById("thing");
+        output3.innerHTML("Some dynamic output");
         // console.log(JSON.stringify(nfcEvent.tag));
         // app.clearScreen();
         //
