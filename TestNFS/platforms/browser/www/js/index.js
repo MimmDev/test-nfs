@@ -8,7 +8,7 @@ var app = {
     },
 
     onDeviceReady: function () {
-        alert("Woooooooooohhh");
+        app.alert("Woooooooooohhh");
         navigator.notification.alert("Device ready");
         output = getElementById("thing");
         output.innerHTML("Some dynamic output");
