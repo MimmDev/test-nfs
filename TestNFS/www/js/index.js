@@ -8,8 +8,8 @@ var app = {
     },
 
     onDeviceReady: function() {
-        navigator.vibrate(300);
-        app.receivedEvent('deviceready')
+        alert("Start message");
+        app.receivedEvent('deviceready');
         nfc.addNdefListener(
           app.onNdef,
           function() {
@@ -26,7 +26,7 @@ var app = {
 
     onNdef: function(nfcEvent) {
         console.log(JSON.stringify(nfcEvent.tag));
-        navigator.vibrate(5000);
+        alert("NFC read");
     }
 
 }
