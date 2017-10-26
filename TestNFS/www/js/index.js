@@ -1,14 +1,11 @@
 var app = {
-    initialize: function() {
-        this.bindEvents();
-    },
-
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false)
-    },
+    document.addEventListener("deviceready", this.onDeviceReady, false);
 
     onDeviceReady: function () {
-        Log.i("myTag", "This is my message");
+        alert("Woooooooooohhh");
+        navigator.notification.alert("Device ready");
+        output = getElementById("thing");
+        output.innerHTML("Some dynamic output");
 
         function failure(reason) {
             navigator.notification.alert(reason, function() {}, "There was a problem");
