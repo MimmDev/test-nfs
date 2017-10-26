@@ -4,12 +4,12 @@ var app = {
     },
 
     bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false)
+        document.addEventListener('deviceReady', this.onDeviceReady, false)
     },
 
     onDeviceReady: function() {
         alert("Start message");
-        app.receivedEvent('deviceready');
+        app.receivedEvent('deviceReady');
         nfc.addNdefListener(
           app.onNdef,
           function() {
