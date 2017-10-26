@@ -1,5 +1,3 @@
-
-
 var app = {
     initialize: function() {
         this.bindEvents()
@@ -10,10 +8,10 @@ var app = {
     },
 
     onDeviceReady: function() {
-        // navigator.vibrate(300);
+        navigator.vibrate(300);
         app.receivedEvent('deviceready')
         nfc.addNdefListener(
-          parseTag,
+          app.onNdef,
           function() {
             console.log("Success.");
           },
@@ -24,9 +22,16 @@ var app = {
     },
 
     receivedEvent: function(id) {
+    },
+
+    onNdef: function(nfcEvent) {
+        console.log(JSON.stringify(nfcEvent.tag));
+        navigator.vibrate(5000);
     }
 
 }
+
+
 
 function parseTag(nfcEvent) {
   var records = nfcEvent.tagData;
