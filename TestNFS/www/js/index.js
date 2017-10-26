@@ -7,8 +7,10 @@ var app = {
         document.addEventListener('deviceReady', this.onDeviceReady, false)
     },
 
-    deviceready: function () {
+    deviceReady: function () {
         navigator.notification.alert("Device ready");
+        ouput = getElementById("thing")
+        output.innerHTML("Some dynamic output")
 
         function failure(reason) {
             navigator.notification.alert(reason, function() {}, "There was a problem");
