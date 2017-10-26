@@ -4,13 +4,14 @@ var app = {
     },
 
     bindEvents: function() {
-        document.addEventListener('deviceReady', this.onDeviceReady, false)
+        document.addEventListener('deviceready', this.onDeviceReady, false)
     },
 
-    deviceReady: function () {
+    onDeviceReady: function () {
+        alert("Woooooooooohhh");
         navigator.notification.alert("Device ready");
-        output = getElementById("thing")
-        output.innerHTML("Some dynamic output")
+        output = getElementById("thing");
+        output.innerHTML("Some dynamic output");
 
         function failure(reason) {
             navigator.notification.alert(reason, function() {}, "There was a problem");
