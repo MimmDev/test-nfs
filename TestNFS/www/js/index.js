@@ -1,7 +1,4 @@
-function parseTag() {
-    var d = document.getElementById("thing")
-    d.innerHTML = "<p>WE ARE PARSING THE TAG</p>"
-}
+
 
 var app = {
     initialize: function() {
@@ -15,10 +12,29 @@ var app = {
     onDeviceReady: function() {
         // navigator.vibrate(300);
         app.receivedEvent('deviceready')
-        nfc.addNdefListener(parseTag);
+        nfc.addNdefListener(
+          parseTag,
+          function() {
+            console.log("Success.");
+          },
+          function() {
+            console.log("Fail.");
+          }
+        );
     },
 
     receivedEvent: function(id) {
     }
 
+}
+
+function parseTag(nfcEvent) {
+  var records = nfcEvent.tagData;
+
+  for (var i = 0; i < records.length; i++) {
+    var record = records[i],
+    p = document.createElement('p');
+    p.innerHTML = nfc.bytesToString(record.payload);
+    display.appendChild(p);
+  }
 }
