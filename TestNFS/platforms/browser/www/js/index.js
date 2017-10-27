@@ -1,7 +1,13 @@
 var app = {
-    document.addEventListener("deviceready", this.onDeviceReady, false)
+    initialize: function() {
+        this.bindEvents();
+    },
 
-    function onDeviceReady() {
+    bindEvents: function() {
+        document.addEventListener('deviceready', this.onDeviceReady, false)
+    },
+
+    onDeviceReady: function () {
         alert("Woooooooooohhh");
         navigator.notification.alert("Device ready");
         output = getElementById("thing");
